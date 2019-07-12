@@ -35,18 +35,18 @@ function createNewItemRow(itemName, itemUnitPrice){
 }
 
 function createNewItem(){
-
-}
+  let input = document.getElementsByTagName('input')[0];
+  console.log(input.value);}
 
 window.onload = function(){
   var calculatePriceButton = document.getElementById('calc-prices-button');
   var createItemButton = document.getElementById('new-item-create');
   var deleteButtons = document.getElementsByClassName('btn-delete');
 
-  calculatePriceButton.onclick = getTotalPrice;
+ // calculatePriceButton.onclick = getTotalPrice;
   createItemButton.onclick = createNewItem;
 
-  for(var i = 0; i<deleteButtons.length ; i++){
+  for(var i = 0; i<deleteButtons.length ; i++) {
     deleteButtons[i].onclick = deleteItem;
   }
 };
